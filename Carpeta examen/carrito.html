@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Tenis - Carrito</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="https://png.pngtree.com/png-vector/20230304/ourmid/pngtree-running-shoes-vector-illustration-png-image_6630048.png" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html" class="active">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 1000px; margin: 3rem auto; padding: 0 1rem;">
+        <h2 class="section-title">Tu Carrito</h2>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Air Red Sport</td>
+                    <td>Caballero</td>
+                    <td class="item-price">$1850.00</td>
+                    <td><input type="number" class="cart-input-qty" value="1" min="1" onchange="calculateTotal()"></td>
+                    <td><button onclick="removeCartItem(this)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td>Rose Elegance</td>
+                    <td>Dama</td>
+                    <td class="item-price">$1600.00</td>
+                    <td><input type="number" class="cart-input-qty" value="1" min="1" onchange="calculateTotal()"></td>
+                    <td><button onclick="removeCartItem(this)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td>Kid Speedy</td>
+                    <td>Niño</td>
+                    <td class="item-price">$990.00</td>
+                    <td><input type="number" class="cart-input-qty" value="2" min="1" onchange="calculateTotal()"></td>
+                    <td><button onclick="removeCartItem(this)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr>
+                    <td>Pink Star</td>
+                    <td>Niña</td>
+                    <td class="item-price">$980.00</td>
+                    <td><input type="number" class="cart-input-qty" value="1" min="1" onchange="calculateTotal()"></td>
+                    <td><button onclick="removeCartItem(this)"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-total-box">
+            Total: <span id="cartTotal">$0.00</span>
+        </div>
+    </main>
+
+    <footer>
+        <p>Examen Unidad 3 Tópicos - Tienda de Tenis.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

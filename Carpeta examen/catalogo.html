@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Tenis - Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="https://png.pngtree.com/png-vector/20230304/ourmid/pngtree-running-shoes-vector-illustration-png-image_6630048.png" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Catálogo de Productos</h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCatalog('all', event)">Todos</button>
+            <button class="filter-btn" onclick="filterCatalog('caballero', event)">Caballero</button>
+            <button class="filter-btn" onclick="filterCatalog('dama', event)">Dama</button>
+            <button class="filter-btn" onclick="filterCatalog('nino', event)">Niño</button>
+            <button class="filter-btn" onclick="filterCatalog('nina', event)">Niña</button>
+        </div>
+
+        <div class="grid-container">
+            <!-- Caballero (6) -->
+            <div class="card product-item caballero"><div class="card-img"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"></div><div class="card-info"><h3>Caballero Model 1</h3><p class="price">$1,850.00</p></div></div>
+            <div class="card product-item caballero"><div class="card-img"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=400"></div><div class="card-info"><h3>Caballero Model 2</h3><p class="price">$1,999.00</p></div></div>
+            <div class="card product-item caballero"><div class="card-img"><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400"></div><div class="card-info"><h3>Caballero Model 3</h3><p class="price">$1,720.00</p></div></div>
+            <div class="card product-item caballero"><div class="card-img"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400"></div><div class="card-info"><h3>Caballero Model 4</h3><p class="price">$2,100.00</p></div></div>
+            <div class="card product-item caballero"><div class="card-img"><img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=400"></div><div class="card-info"><h3>Caballero Model 5</h3><p class="price">$1,650.00</p></div></div>
+            <div class="card product-item caballero"><div class="card-img"><img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?w=400"></div><div class="card-info"><h3>Caballero Model 6</h3><p class="price">$2,300.00</p></div></div>
+
+            <!-- Dama (6) -->
+            <div class="card product-item dama"><div class="card-img"><img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=400"></div><div class="card-info"><h3>Dama Model 1</h3><p class="price">$1,600.00</p></div></div>
+            <div class="card product-item dama"><div class="card-img"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400"></div><div class="card-info"><h3>Dama Model 2</h3><p class="price">$1,890.00</p></div></div>
+            <div class="card product-item dama"><div class="card-img"><img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=400"></div><div class="card-info"><h3>Dama Model 3</h3><p class="price">$1,750.00</p></div></div>
+            <div class="card product-item dama"><div class="card-img"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"></div><div class="card-info"><h3>Dama Model 4</h3><p class="price">$1,950.00</p></div></div>
+            <div class="card product-item dama"><div class="card-img"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=400"></div><div class="card-info"><h3>Dama Model 5</h3><p class="price">$1,499.00</p></div></div>
+            <div class="card product-item dama"><div class="card-img"><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400"></div><div class="card-info"><h3>Dama Model 6</h3><p class="price">$2,050.00</p></div></div>
+
+            <!-- Niño (6) -->
+            <div class="card product-item nino"><div class="card-img"><img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=400"></div><div class="card-info"><h3>Niño Model 1</h3><p class="price">$990.00</p></div></div>
+            <div class="card product-item nino"><div class="card-img"><img src="https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?w=400"></div><div class="card-info"><h3>Niño Model 2</h3><p class="price">$1,100.00</p></div></div>
+            <div class="card product-item nino"><div class="card-img"><img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=400"></div><div class="card-info"><h3>Niño Model 3</h3><p class="price">$1,050.00</p></div></div>
+            <div class="card product-item nino"><div class="card-img"><img src="https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?w=400"></div><div class="card-info"><h3>Niño Model 4</h3><p class="price">$899.00</p></div></div>
+            <div class="card product-item nino"><div class="card-img"><img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=400"></div><div class="card-info"><h3>Niño Model 5</h3><p class="price">$1,150.00</p></div></div>
+            <div class="card product-item nino"><div class="card-img"><img src="https://images.unsplash.com/photo-1507464098880-e367bc5d2c08?w=400"></div><div class="card-info"><h3>Niño Model 6</h3><p class="price">$950.00</p></div></div>
+
+            <!-- Niña (6) -->
+            <div class="card product-item nina"><div class="card-img"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400"></div><div class="card-info"><h3>Niña Model 1</h3><p class="price">$980.00</p></div></div>
+            <div class="card product-item nina"><div class="card-img"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400"></div><div class="card-info"><h3>Niña Model 2</h3><p class="price">$1,050.00</p></div></div>
+            <div class="card product-item nina"><div class="card-img"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400"></div><div class="card-info"><h3>Niña Model 3</h3><p class="price">$1,120.00</p></div></div>
+            <div class="card product-item nina"><div class="card-img"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400"></div><div class="card-info"><h3>Niña Model 4</h3><p class="price">$890.00</p></div></div>
+            <div class="card product-item nina"><div class="card-img"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400"></div><div class="card-info"><h3>Niña Model 5</h3><p class="price">$1,190.00</p></div></div>
+            <div class="card product-item nina"><div class="card-img"><img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400"></div><div class="card-info"><h3>Niña Model 6</h3><p class="price">$999.00</p></div></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>Examen Unidad 3 Tópicos - Universidad.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
